@@ -1,0 +1,202 @@
+:root{
+      --bg: #f8f7f4;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --brand: #2b5d3a;      /* tono biblioteca */
+      --brand-2:#8fbf9f;
+      --radius: 0.75rem;
+      --space: 1rem;
+      --maxw: 1200px;
+    }
+    *{ box-sizing: border-box; }
+    html{ font-size: 16px; }
+    body{
+      margin: 0;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.5;
+    }
+    .cover img{ width:100%; height:100%; object-fit:cover; display:block; }
+    a{ color: inherit; text-decoration: none; }
+    /* ==============================
+       Layout general con CSS Grid
+       ============================== */
+    .container{
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      min-height: 100svh;
+    }
+    header{
+      background: linear-gradient(90deg, var(--brand) 0%, var(--brand-2) 100%);
+      color: white;
+    }
+    .header-inner{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: calc(var(--space)*1.25) var(--space);
+      display: flex;               /* Flexbox: distribución horizontal */
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space);
+      flex-wrap: wrap;
+    }
+    .brand{
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      font-weight: 700;
+      letter-spacing: .4px;
+    }
+    .brand-logo{
+      inline-size: 2rem;
+      block-size: 2rem;
+      border-radius: 50%;
+      background: #fff;
+      display: grid;
+      place-items: center;
+      color: var(--brand);
+      font-weight: 800;
+    }
+    nav{
+      display: flex;               /* Flexbox para menú horizontal */
+      gap: 1rem;
+    }
+    nav a{
+      padding: .5rem .75rem;
+      border-radius: .5rem;
+      background: rgb(255 255 255 / .12);
+      color: #fff;
+      font-weight: 500;
+    }
+    main{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      width: 100%;
+      padding: var(--space);
+      display: grid;               /* Grid 2 columnas: filtros + catálogo */
+      grid-template-columns: 280px 1fr;
+      gap: var(--space);
+    }
+    
+    /* ==============================
+       Aside (Filtros) — usa Flexbox para chips
+       ============================== */
+    aside{
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: var(--space);
+      display: grid;
+      gap: .75rem;
+      align-content: start;
+      box-shadow: 0 1px 2px rgba(0,0,0,.05);
+    }
+    .filters-title{
+      margin: 0;
+      font-size: 1.125rem;
+    }
+    .filter-group{ display: grid; gap: .5rem; }
+    .chips{
+      display: flex;       /* Flexbox */
+      flex-wrap: wrap;
+      gap: .5rem;
+    }
+    .chip{
+      padding: .35rem .6rem;
+      border-radius: 999px;
+      background: #eef2f7;
+      color: #1f2937;
+      font-size: .9rem;
+      border: 1px solid #e5e7eb;
+    }
+    .search{
+      display: grid;
+      gap: .5rem;
+    }
+    .search input, .sort select{
+      padding: .6rem .7rem;
+      border-radius: .5rem;
+      border: 1px solid #d1d5db;
+      background: #fff;
+    }
+    .sort{ display: grid; gap: .5rem; }
+    /* ==============================
+       Catálogo — CSS Grid para tarjetas
+       ============================== */
+    .catalog{
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: var(--space);
+    }
+    .catalog-header{
+      display: flex;           /* Flexbox */
+      align-items: baseline;
+      justify-content: space-between;
+      gap: .75rem;
+      flex-wrap: wrap;
+    }
+    .grid{
+      display: grid;           /* Grid responsivo con minmax */
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: var(--space);
+      align-content: start;
+    }
+    .card{
+      background: var(--card);
+      border-radius: var(--radius);
+      overflow: clip;
+      box-shadow: 0 1px 2px rgba(0,0,0,.06);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+    .cover{
+      aspect-ratio: 3/4;                  /* mantiene proporción */
+      background: #e6efe9;
+      display: grid;
+      place-items: center;
+      color: var(--brand);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .body{ padding: .75rem .9rem; display: grid; gap: .35rem; }
+    .title{ font-weight: 700; }
+    .meta{ color: var(--muted); font-size: .9rem; }
+    .actions{
+      padding: .75rem .9rem;
+      border-top: 1px solid #eef2f7;
+      display: flex; gap: .5rem;
+    }
+    .btn{
+      padding: .5rem .75rem;
+      border-radius: .5rem;
+      border: 1px solid #d1d5db;
+      background: #fff;
+      cursor: pointer;
+    }
+    footer{
+      margin-top: var(--space);
+      color: var(--muted);
+      font-size: .95rem;
+      padding: var(--space);
+      text-align: center;
+    }
+    /* ==============================
+       Media Queries (responsivo)
+       ============================== */
+    @media (max-width: 960px){
+      main{
+        grid-template-columns: 220px 1fr;
+      }
+    }
+    @media (max-width: 720px){
+      main{
+        grid-template-columns: 1fr;   /* Sidebar arriba, catálogo abajo */
+      }
+      nav{ width: 100%; justify-content: flex-start; }
+    }
+    @media (max-width: 420px){
+      .grid{ grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+      .header-inner{ padding: .9rem .75rem; }
+      main{ padding: .9rem; }
+    }

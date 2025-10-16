@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>formulacion</title>
+</head>
+<header>
+    <h1>Luis Eduardo Pinzon Gamboa</h1>
+    <h2>taller 4 clase html</h2>
+    <nav>
+        <a href="/">NAV</a>
+        <a href="/">Inicio</a>
+         <a href="/">Sobre Mi</a>
+        <a href="/">Proyectos</a>
+        <a href="/">Contacto</a >
+    </nav>
+</header>
+<body>
+    <main>
+<div>
+ <section>
+    <h2>Sobre Mi</h2>
+<img src="luisp2.png" alt="Luis Eduardo Pinzon Gamboa" width="200" height="200">
+<p>Soy un estudiante apasionado por el desarrollo web y la tecnología. Me interesa aprender a construir interfaces funcionales y bien estructuradas, entendiendo a fondo cómo funciona HTML como la base de toda página web. Busco fortalecer mis habilidades técnicas y aplicar lo aprendido en proyectos reales</p>
+ </section>
+ <h2 id="habilidades-titulo">Tabla de habilidades</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Habilidad</th>
+          <th>Nivel</th>
+          <th>Años de experiencia</th>
+          <th>Notas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>HTML</td>
+          <td>Intermedio</td>
+          <td>1-2</td>
+          <td>Conozco etiquetas semánticas</td>
+        </tr>
+        <tr>
+          <td>CSS</td>
+          <td>Intermedio</td>
+          <td>1-2</td>
+          <td>Puedo maquetar layouts simples</td>
+        </tr>
+        <tr>
+          <td>JavaScript</td>
+          <td>Intermedio</td>
+          <td>1-2</td>
+          <td>DOM y eventos</td>
+        </tr>
+        <tr>
+          <td>React</td>
+          <td>Intermedio</td>
+          <td>1-2</td>
+          <td>Manejo de Frameworks basico</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- SECTION: Formulario de contacto -->
+  <section aria-labelledby="contacto-titulo">
+    <h2 id="contacto-titulo">Formulario de contacto</h2>
+
+    <form action="/enviar" method="post">
+      <div>
+        <label for="nombre">Nombre</label><br />
+        <input id="nombre" name="nombre" type="text" required />
+      </div>
+
+      <div>
+        <label for="email">Email</label><br />
+        <input id="email" name="email" type="email" required />
+      </div>
+
+      <div>
+        <label for="mensaje">Mensaje</label><br />
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+      </div>
+
+      <div>
+        <button type="submit">Enviar</button>
+      </div>
+    </form>
+  </section>
+</div>
+    </main>
+</body>
+<footer>
+    <p>©2025 Luis Eduardo Pinzon Gamboa Derechos reservados</p>
+</footer>
+</html>

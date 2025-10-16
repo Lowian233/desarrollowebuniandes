@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Consumo de API — Usuarios</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1>Usuarios (API)</h1>
+      <nav aria-label="Principal">
+        <a href="#" id="reload">Recargar</a>
+        <a href="https://jsonplaceholder.typicode.com/users" target="_blank" rel="noopener">Ver API</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <section class="intro wrap">
+      <h2 class="sr-only">Descripción</h2>
+      <p>Ejemplo de consumo de API con <strong>fetch</strong> y <strong>async/await</strong>. Se muestran nombre, email y ciudad.</p>
+    </section>
+
+    <section class="wrap">
+      <h2>Listado</h2>
+
+      <!-- Estado de carga -->
+      <div id="loading" class="loading" aria-live="polite" role="status">
+        Cargando usuarios...
+      </div>
+
+      <!-- Contenedor de tarjetas -->
+      <div id="cards" class="grid" hidden></div>
+
+      <!-- Mensajes (errores, vacíos) -->
+      <div id="message" class="message" aria-live="assertive"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <small>© 2025 Taller — Consumo de API - Luis Eduardo Pinzon</small>
+    </div>
+  </footer>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biblioteca Digital — Layout Responsivo (Flexbox + Grid)</title>
+  <link rel="stylesheet" href="/tallerlayouts/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-inner">
+        <div class="brand" aria-label="Biblioteca Digital">
+          <div class="brand-logo" aria-hidden="true">B</div>
+          <span>Biblioteca Digital</span>
+        </div>
+        <nav aria-label="Principal">
+          <a href="#catalogo">Catálogo</a>
+          <a href="#novedades">Novedades</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <aside aria-label="Filtros de búsqueda">
+        <h2 class="filters-title">Filtros</h2>
+
+        <div class="search">
+          <label for="q">Buscar</label>
+          <input id="q" type="search" placeholder="Título, autor, ISBN..." />
+        </div>
+
+        <div class="filter-group">
+          <strong>Categorías</strong>
+          <div class="chips">
+            <span class="chip">Ficción</span>
+            <span class="chip">No Ficción</span>
+            <span class="chip">Ciencia</span>
+            <span class="chip">Historia</span>
+            <span class="chip">Infantil</span>
+            <span class="chip">Tecnología</span>
+          </div>
+        </div>
+
+        <div class="sort">
+          <label for="orden">Ordenar por</label>
+          <select id="orden">
+            <option value="recientes">Más recientes</option>
+            <option value="titulo">Título (A–Z)</option>
+            <option value="autor">Autor (A–Z)</option>
+          </select>
+        </div>
+      </aside>
+
+      <!-- CATÁLOGO (Grid de tarjetas) -->
+      <section id="catalogo" class="catalog" aria-label="Catálogo de libros">
+        <div class="catalog-header">
+          <h2 style="margin:0;">Catálogo de libros</h2>
+          <small class="meta">6 resultados</small>
+        </div>
+
+        <div class="grid">
+          <!-- Tarjeta 1 -->
+          <article class="card" role="article">
+            <div class="cover">
+                <img src="./public/cover.png" alt="Portada de libro aleatoria" loading="lazy" />
+              </div>
+            <div class="body">
+              <div class="title">La Odisea del Código</div>
+              <div class="meta">A. Homero | Ficción</div>
+              
+            </div>
+            <div class="actions">
+              <button class="btn" type="button">Ver</button>
+              <button class="btn" type="button">Añadir</button>
+            </div>
+          </article>
+
+          <!-- Tarjeta 2 -->
+          <article class="card">
+            <div class="cover">
+                <img src="./public/cover.png" alt="Portada de libro aleatoria" loading="lazy" />
+              </div>
+            <div class="body">
+              <div class="title">Historia Breve del Tiempo</div>
+              <div class="meta">S. Hawking | Ciencia</div>
+            </div>
+            <div class="actions">
+              <button class="btn" type="button">Ver</button>
+              <button class="btn" type="button">Añadir</button>
+            </div>
+          </article>
+
+          <!-- Tarjeta 3 -->
+          <article class="card">
+            <div class="cover">
+                <img src="./public/cover.png" alt="Portada de libro aleatoria" loading="lazy" />
+              </div>
+            <div class="body">
+              <div class="title">Patrones de CSS Moderno</div>
+              <div class="meta">J. Cascada | Tecnología</div>
+            </div>
+            <div class="actions">
+              <button class="btn" type="button">Ver</button>
+              <button class="btn" type="button">Añadir</button>
+            </div>
+          </article>
+
+          <!-- Tarjeta 4 -->
+          <article class="card">
+            <div class="cover">
+                <img src="./public/cover.png" alt="Portada de libro aleatoria" loading="lazy" />
+              </div>
+            <div class="body">
+              <img src="" alt="">
+              <div class="title">Crónicas de una Biblioteca</div>
+              <div class="meta">M. Márquez | Historia</div>
+            </div>
+            <div class="actions">
+              <button class="btn" type="button">Ver</button>
+              <button class="btn" type="button">Añadir</button>
+            </div>
+          </article>
+
+          <!-- Tarjeta 5 -->
+          <article class="card">
+            <div class="cover">
+                <img src="./public/cover.png" alt="Portada de libro aleatoria" loading="lazy" />
+              </div>
+            <div class="body">
+              <div class="title">Cuentos para Niñas y Niños</div>
+              <div class="meta">L. Pinzón | Infantil</div>
+            </div>
+            <div class="actions">
+              <button class="btn" type="button">Ver</button>
+              <button class="btn" type="button">Añadir</button>
+            </div>
+          </article>
+
+          <!-- Tarjeta 6 -->
+          <article class="card">
+            <div class="cover">
+                <img src="./public/cover.png" alt="Portada de libro aleatoria" loading="lazy" />
+              </div>
+            <div class="body">
+              <div class="title">Introducción a Bases de Datos</div>
+              <div class="meta">R. Codd | Tecnología</div>
+            </div>
+            <div class="actions">
+              <button class="btn" type="button">Ver</button>
+              <button class="btn" type="button">Añadir</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2025 Biblioteca Digital- Luis Eduardo Pinzon
+    </footer>
+  </div>
+</body>
+</html>
